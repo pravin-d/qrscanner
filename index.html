@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="QrScanner PWA">
+  <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+
+  <meta name="description" content="A sample qrscanner app">
+  <meta name="theme-color" content="#2F3BA2" />
+</head>
+<body>
+
+<button onclick="window.location.href='/one.html'">Image Input Test</button>
+<button onclick="window.location.href='/two.html'">JS_QR</button>
+<button onclick="window.location.href='/insta/index.html'">Insta scanner</button>
+<button onclick="window.location.href='/four.html'">React QrScanner</button>
+<button onclick="window.location.href='/build/index.html'">React Pages</button>
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((reg) => {
+              console.log('Service worker registered.', reg);
+            });
+      });
+    }
+</script>
+</body>
+</html>
