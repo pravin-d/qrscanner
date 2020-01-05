@@ -111,12 +111,13 @@
           outputMessage.hidden = true;
           outputData.parentElement.hidden = false;
           outputData.innerText = code.data;
+          video.stop()
+          requestAnimationFrame(tick);
         } else {
           outputMessage.hidden = false;
           outputData.parentElement.hidden = true;
         }
       }
-      requestAnimationFrame(tick);
     }
   </script>
 </body>
