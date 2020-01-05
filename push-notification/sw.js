@@ -67,17 +67,17 @@ self.addEventListener('notificationclick', function(event) {
     for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
       // console.log(client.url)
-      if (client.url.includes('http://127.0.0.1:8887/qrscanner/') && 'focus' in client) {
+      if (client.url.includes('/qrscanner/') && 'focus' in client) {
         found = true
         break;
       }
     }
     if (!found)
-      return clients.openWindow('http://127.0.0.1:8887/qrscanner/push-notification/test.html');
+      return clients.openWindow('/qrscanner/push-notification/test.html');
     else {
       return client.focus()
       .then(() => {
-        return client.navigate('http://127.0.0.1:8887/qrscanner/push-notification/test.html');  
+        return client.navigate('/qrscanner/push-notification/test.html');  
       })
     }
   }));
