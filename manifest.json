@@ -1,6 +1,6 @@
 {
   "name": "QRScanTest",
-  "short_name": "QRScanTest",
+  "short_name": "QrScanner PWA",
   "icons": [{
     "src": "/qrscanner/images/icons/icon-128x128.png",
       "sizes": "128x128",
